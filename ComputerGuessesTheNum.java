@@ -20,7 +20,7 @@ public class ComputerGuessesTheNum {
                 highestLimit = playersNum + 1;
             } else if (playersAnswer.equals(">")) {
                 lowestLimit = playersNum - 1;
-            }
+            }H
                 } while (!playersAnswer.equals("Yes"));
         sc.close();
         System.out.println("Game over!");

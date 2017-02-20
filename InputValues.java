@@ -3,7 +3,7 @@ package com.company.javaguruTasks;
 import java.util.*;
 
 public class InputValues {
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     private int x;
     private int y;
     private int z;
@@ -19,14 +19,17 @@ public class InputValues {
 
 
     public void setInitialValues() {
-        x = scanner.nextInt();
+            x = scanner.nextInt();
         y = scanner.nextInt();
         z = scanner.nextInt();
     }
+}
 
-    public static void main(String[] args) {
+    class InputValuesTestDrive {
+        public static void main (String[]args){
         InputValues a = new InputValues();
         a.setInitialValues();
         a.checkTheBiggest();
     }
 }
+

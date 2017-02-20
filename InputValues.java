@@ -19,7 +19,7 @@ public class InputValues {
 
 
     public void setInitialValues() {
-            x = scanner.nextInt();
+        x = scanner.nextInt();
         y = scanner.nextInt();
         z = scanner.nextInt();
     }

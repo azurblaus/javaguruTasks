@@ -4,77 +4,29 @@ import java.util.*;
 
 public class InputValues {
     Scanner scanner = new Scanner(System.in);
-    int x = scanner.nextInt();
-    int y = scanner.nextInt();
-    int z = scanner.nextInt();
+    private int x;
+    private int y;
+    private int z;
 
-    
+
     public void checkTheBiggest() {
+        if ((x == y) && (y == z)) {
+            System.out.println("A == B == C");
+        } else {
+            System.out.println("Three numbers are not equal");
+        }
+    }
 
-        if (x > y && x > z)
-            System.out.println("First number is largest.");
-        else if (y > x && y > z)
-            System.out.println("Second number is largest.");
-        else if (z > x && z > y)
-            System.out.println("Third number is largest.");
-        else
-            System.out.println("All numbers are equal.");
+
+    public void setInitialValues() {
+        x = scanner.nextInt();
+        y = scanner.nextInt();
+        z = scanner.nextInt();
     }
 
     public static void main(String[] args) {
         InputValues a = new InputValues();
+        a.setInitialValues();
         a.checkTheBiggest();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /*   public int usersInput(){
-       int[] inputValue = new int[3];
-        for (int i = 0; i < inputValue.length; i++) {
-            System.out.println("Input new number: ");
-            int input = scanner.nextInt();
-            inputValue[i] = input;
-        }
-            return input;
-        }
-
-    public void compareTheInputs(){
-        if (usersInput(input )
-
-    }
-
-} */

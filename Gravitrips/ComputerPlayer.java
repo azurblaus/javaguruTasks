@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class ComputerPlayer extends Player {
 
-    public ComputerPlayer(){
+    public ComputerPlayer(int numOfPlayers){
         setPlayerName("Computer");
         setGamePiece(GamePiece.O);
 

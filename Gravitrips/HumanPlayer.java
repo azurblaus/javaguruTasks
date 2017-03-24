@@ -21,10 +21,6 @@ public class HumanPlayer extends Player {
 
     @Override
     public int getHit() {
-        return userInput();
-    }
-
-    private int userInput() {
         int move = 0;
         boolean validInput = false;
 

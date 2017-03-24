@@ -13,10 +13,6 @@ public class Board {
         }
     }
 
-    public GamePiece getCell(int column, int row) {
-        return board[column][row];
-    }
-
     public void printBoard() {
 
         for (int i = 1; i <= 7; i++) {
@@ -29,15 +25,11 @@ public class Board {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
 
-    public void addHit(int hit, int freeSpace, GamePiece gamePiece) {
-
-        board[hit][freeSpace] = gamePiece;
-    }
-
-    public int checkHit(int hit) {
+    public int checkValidHit(int hit) {
         int i = 5;
 
         while ((i >= 0) && (board[hit][i] != (GamePiece.EMPTY))) {
@@ -46,7 +38,7 @@ public class Board {
         return i;
     }
 
-    public boolean checkColumns(int space) {
+    public boolean checkColumnAvailability(int space) {
         if (space == -1) {
             System.out.println("Column is already full, try again!");
         }
@@ -55,17 +47,13 @@ public class Board {
 
     public boolean checkBoard() {
         boolean check = false;
-        int i = 0;
-        while (!check && i < COLUMNS) {
-            if (board[i][0].equals(GamePiece.EMPTY)) {
-                check = true;
-            }
-            i++;
+        for (int i = 0; i < COLUMNS; i++) {
+            board[i][0].equals(GamePiece.EMPTY);
+            check = true;
         }
         if (!check) {
             System.out.println("Game over, no more moves!");
         }
         return check;
     }
-
 }

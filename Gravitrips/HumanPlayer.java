@@ -1,21 +1,19 @@
-import java.io.IOException;
 import java.util.Scanner;
+
 
 public class HumanPlayer extends Player {
 
-    public Scanner scanner = new Scanner(System.in);
+    public HumanPlayer() {
+        Scanner scanner = new Scanner(System.in);
+        setGamePiece(GamePiece.X);
+        System.out.print("Please enter the name of the player: ");
+        setPlayerName(scanner.nextLine());
+    }
 
-    public HumanPlayer(int numOfPlayers) throws IOException {
-        String number;
-
-        if (numOfPlayers == 1) {
-            number = "first";
-            setGamePiece(GamePiece.X);
-        } else {
-            number = "second";
-            setGamePiece(GamePiece.O);
-        }
-        System.out.print("Please enter the name of " + number + " player: ");
+    public HumanPlayer(int humanVsHuman) {
+        Scanner scanner = new Scanner(System.in);
+        setGamePiece(GamePiece.O);
+        System.out.println("Please enter the name of the player: ");
         setPlayerName(scanner.nextLine());
     }
 
@@ -23,7 +21,7 @@ public class HumanPlayer extends Player {
     public int getHit() {
         int move = 0;
         boolean validInput = false;
-
+        Scanner scanner = new Scanner(System.in);
         while (!validInput) {
             System.out.println("Player " + getPlayerName() + " set token - " + getGamePiece() + " from 1 to 7: ");
             try {

@@ -2,10 +2,8 @@ import java.util.Random;
 
 public class ComputerPlayer extends Player {
 
-    public ComputerPlayer(){
-        setPlayerName("Computer");
-        setGamePiece(GamePiece.O);
-
+    public ComputerPlayer() {
+        super("Computer", GamePiece.O);
     }
 
     @Override

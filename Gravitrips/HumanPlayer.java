@@ -1,20 +1,9 @@
 import java.util.Scanner;
 
-
 public class HumanPlayer extends Player {
 
-    public HumanPlayer() {
-        Scanner scanner = new Scanner(System.in);
-        setGamePiece(GamePiece.X);
-        System.out.print("Please enter the name of the player: ");
-        setPlayerName(scanner.nextLine());
-    }
-
-    public HumanPlayer(int humanVsHuman) {
-        Scanner scanner = new Scanner(System.in);
-        setGamePiece(GamePiece.O);
-        System.out.println("Please enter the name of the player: ");
-        setPlayerName(scanner.nextLine());
+    public HumanPlayer(String playerName, GamePiece gamePiece) {
+        super(playerName, gamePiece);
     }
 
     @Override
